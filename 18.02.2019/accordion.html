@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    .accordion{
+        background-color:#999;
+        color:#222;
+        width:100%;
+        text-align:left;
+        font-size:15px;
+        padding:10px;
+        border:none;
+        outline:none;
+        cursor:pointer;
+        transition: 0.5s;
+    }
+    .panel{
+        background-color: aqua;
+        padding:0 30px;
+        overflow: hidden;
+        max-height:0;
+        transition: max-height 0.2s ease-out;
+
+    }
+    .active, .accordion:hover{
+        background-color: blue;
+    }
+    .accordion:after {
+  content: '\002B';
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+    
+</style>
+    </head>
+    <body>
+        <button class ="accordion">Section 1</button>
+        <div class="panel">
+            Coding is Tough.
+        </div>
+        <button class ="accordion">Section 1</button>
+        <div class="panel">
+            Coding is Easy.
+        </div>
+        <button class ="accordion">Section 1</button>
+        <div class="panel">
+            Coding is Fun.
+        </div>
+        <script>
+      var acc=document.getElementsByClassName("accordion");
+      var i;
+      for(i=0;i<acc.length;i++){
+          acc[i].addEventListener("click", function(){
+              this.classList.toggle("active");
+              var panel= this.nextElementSibling;
+              if (panel.style.maxHeight){
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = 
+      panel.scrollHeight + "px";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+                  }
+                
+              });
+          }
+      
+        </script>
+
+    </body>
+</html>
